@@ -1,4 +1,4 @@
-LIST CONDITIONAL: Create a new list from a previous list.
+LIST COMPREHENSION: Create a new list from a previous list.
 
 BOTH EXAMPLES PRODUCE THE SAME OUTPUT
 ######################################################
