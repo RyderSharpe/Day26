@@ -21,6 +21,7 @@ new_list = [letter for letter in name]
 ######################################################
 
 # CONDITIONAL LIST COMPREHENSION
+result = [NAMED_ANYTHING for NAMED_ANYTHING in numbers if NAMED_ANYTHING % 2 == 0]
 new_list = [new_item for item in list if test] # Item can be called anything you want
 
 names = ["Alex","Joe","Roger","PeterMcPeterson"]
