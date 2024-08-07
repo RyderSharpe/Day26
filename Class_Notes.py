@@ -36,9 +36,20 @@ new_list = [SAME_NAME for SAME_NAME in list if SAME_NAME]
 Here’s what each part does:
 
 1. new_item: This is the expression that defines what each element of the new list will be. It can be any expression involving item.
+   new_item: The operation or transformation applied to item that defines what gets included in the new list.
+
 2. item: This is a variable that takes each value from the iterable (e.g., list) one by one.
+   item: Each element from the original list (or any iterable).
+
 3. list: This is the iterable (e.g., a list) that you are iterating over.
+   list: The list you are pulling from. 
+
 4. test: This is an optional condition (a boolean expression). Only items for which this condition evaluates to True are included in the new list.
+   test: A condition that must be true for the item to be included in the new list
+
+
+
+    
     
 What Can Be in Each Place:
 new_item: Any expression that can use item. It can be a calculation, a function call, a transformation, etc. Example: number**2, str(item), item * 2, item.upper().
