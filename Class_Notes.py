@@ -63,14 +63,15 @@ New_dict = {new_key: new_value for (key, value) in dict.items()}
 New_dict = {new_key: new_value for (key, value) in dict.items() if test}
 
 
-# So, when we make a new dictionary using a loop, like this:
-# {new_key: new_value for (key, value) in dict.items()}
-# new_key is like a box where we put the name for the thing we want to store.
-# new_value is like the thing we want to store itself.
-# We can use the same names as before (key and value), or we can use different names (new_key and new_value).
-# It's like giving a nickname to the thing we're storing!
-# If we want to change the name or the thing itself, we can do that too! Like this:
-# {key.upper(): value for (key, value) in dict.items()}
+breaking it down:
+new_key is the label on the box (the name of the thing).
+new_value is the thing inside the box (the value or content).
+When we create a new dictionary, we're making new boxes with labels (new_key) and putting things inside those boxes (new_value).
+For example:
+{name: age for (name, age) in people.items()}
+name is the label on the box (the person's name).
+age is the thing inside the box (the person's age).
+We're taking the name and age from the original dictionary people and creating new boxes with the same labels (name) and things inside (age).
 
 
 Example: Generate random score for each student.
