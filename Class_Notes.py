@@ -1,7 +1,7 @@
 LIST COMPREHENSION: Create a new list from a previous list.
 
 BOTH EXAMPLES PRODUCE THE SAME OUTPUT
-######################################################
+//////////////////////////////////////////////////////////
 # Example 1: Original way.
 numbers = [1,2,3]
 new_list = []
@@ -13,12 +13,12 @@ for n in numbers:
 numbers = [1,2,3]
 new_list = [operation for item in list] # How to use
 new_list = [n + 1 for n in numbers] # Example
-######################################################
+//////////////////////////////////////////////////////////
 
 name = "Ryder"
 new_list = [letter for letter in name]
 # OUTPUT: ['R', 'y', 'd', 'e', 'r']
-######################################################
+//////////////////////////////////////////////////////////
 
 # CONDITIONAL LIST COMPREHENSION
 result = [NAMED_ANYTHING for NAMED_ANYTHING in numbers if NAMED_ANYTHING % 2 == 0]
@@ -28,7 +28,7 @@ names = ["Alex","Joe","Roger","PeterMcPeterson"]
 # new_list = [name for name in names if len(name) < 5]
 newlist = [nom.upper() for nom in names if len(nom) < 5]
 print(newlist)
-######################################################
+//////////////////////////////////////////////////////////
 
 new_list = [new_item for item in list if test]
 new_list = [SAME_NAME for SAME_NAME in list if SAME_NAME]
@@ -49,6 +49,7 @@ Here’s what each part does:
 
  
 What Can Be in Each Place:
+
 new_item: Any expression that can use item. It can be a calculation, a function call, a transformation, etc. Example: number**2, str(item), item * 2, item.upper().
 item: Any variable name that you use to represent each element of the iterable. This name should be used consistently within the comprehension.
 list: Any iterable (e.g., list, tuple, set, dictionary keys or values, string).
@@ -96,5 +97,42 @@ Example.
     result = {number: len(number) for number in list}
     print(result)
 
+///////////////////////////////////////////////////////////////////////////
+
+student_dict = {
+    "student": ["Angela", "James", "Lily"],
+    "score": [56, 76, 98]
+}
+#Looping through dictionaries:
+for (key, value) in student_dict.items():
+    # Access key and value
+    # print(f"This is the Key: {key}")
+    # print(f"This is the Value: {value}")
+    pass
+
+import pandas
+
+student_data_frame = pandas.DataFrame(student_dict)
+# print(student_data_frame)
+
+# Loop through data frame
+for (key, value) in student_data_frame.items():
+    #Access index and row
+    #Access row.student or row.score
+    print(f"This is the Key: \n{key}")
+    print(f"This is the Value: \n{value}")
+    pass
+
+for (index, row) in student_data_frame.iterrows():
+    # print(index)
+    # print(row)
+    # print(row.student)
+    # print(row.score)
+    if row.student == "Angela":
+        print(row.score)
+
+# Keyword Method with iterrows()
+# {new_key: new_value for (key, value) in dic.items()}
+# {new_key: new_value for (index, row) in df.iterrows()}
 
     
